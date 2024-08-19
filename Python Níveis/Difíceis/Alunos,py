@@ -1,0 +1,31 @@
+class Aluno:
+    def __init__(self, nome, email):
+        self.nome = nome
+        self.email = email
+
+    def LeNome(self):
+        return self.nome
+
+    def LeEmail(self):
+        return self.email
+
+# Cadastro
+cadastro = []
+
+# Criando os objetos Aluno e adicionando à lista
+alunos_dados = [
+    ('Bob', 'bob@xyz.com'),
+    ('Fabio', 'fabio@xyz.com'),
+    ('Felipe', 'felipe@xyz.com'),
+    ('Clara', 'clara@xyz.com'),
+    ('Maria', 'maria@xyz.com'),
+    ('Pedro', 'pedro@xyz.com')
+]
+
+for nome, email in alunos_dados:
+    aluno = Aluno(nome, email)
+    cadastro.append(aluno)
+
+# Listando
+for al1 in cadastro:
+    print(f'aluno: {al1.LeNome()} com e-mail: {al1.LeEmail()}')
